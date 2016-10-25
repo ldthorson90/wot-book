@@ -1,7 +1,7 @@
-var onoff = require('onoff'); //#A
+var piGpio = require('pi-gpio'); //#A
 
 var Gpio = onoff.Gpio,
-  led = new Gpio(4, 'out'), //#B
+  led = new Gpio(9, 'out'), //#B
   interval;
 
 interval = setInterval(function () { //#C
@@ -19,10 +19,10 @@ process.on('SIGINT', function () { //#F
   process.exit();
 });
 
-// #A Import the onoff library
-// #B Initialize pin 4 to be an output pin
+// #A Import the pi-gpio library
+// #B Initialize pin 9 to be an output pin
 // #C This interval will be called every 2 seconds
-// #D Synchronously read the value of pin 4 and transform 1 to 0 or 0 to 1
-// #E Asynchronously write the new value to pin 4
+// #D Synchronously read the value of pin 9 and transform 1 to 0 or 0 to 1
+// #E Asynchronously write the new value to pin 9
 // #F Listen to the event triggered on CTRL+C
 // #G Cleanly close the GPIO pin before exiting
