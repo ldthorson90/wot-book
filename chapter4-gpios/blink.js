@@ -1,6 +1,6 @@
-var piGpio = require('pi-gpio'); //#A
+var piGpio = require('gpio'); //#A
 
-var Gpio = onoff.Gpio,
+var Gpio = gpio.Gpio,
   led = new Gpio(9, 'out'), //#B
   interval;
 
