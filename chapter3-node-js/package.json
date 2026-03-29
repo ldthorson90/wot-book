@@ -6,8 +6,13 @@
   "repository": "https://github.com/webofthings/wot-book.git",
   "dependencies": {
     "async": "^0.9.0",
-    "request": "^2.53.0"
+    "request": "^2.88.2"
   },
   "devDependencies": {},
-  "engine": "node >= 4.2.2"
+  "engine": "node >= 4.2.2",
+  "overrides": {
+    "form-data": ">=2.5.4",
+    "qs": ">=6.14.1",
+    "tough-cookie": ">=4.1.3"
+  }
 }
